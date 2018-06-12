@@ -90,8 +90,8 @@ void loop()
     updateGoalVelocity();
 
     //bkjung deleted
-    motor_driver.controlMotor(WHEEL_SEPARATION, goal_velocity);
-    //motor_driver.controlMotorAngle(left_wheel_angle_from_cmd, right_wheel_angle_from_cmd);
+    //motor_driver.controlMotor(WHEEL_SEPARATION, goal_velocity);
+    motor_driver.controlMotorAngle(left_wheel_angle_from_cmd, right_wheel_angle_from_cmd);
     tTime[0] = t;
   }
 
