@@ -33,12 +33,10 @@ void setup()
   nh.subscribe(left_wheel_angle_sub);
   nh.subscribe(right_wheel_angle_sub);
 
-  //bkjung deleted
   nh.subscribe(cmd_vel_sub);
   nh.subscribe(sound_sub);
   nh.subscribe(motor_power_sub);
   nh.subscribe(reset_sub);
-
 
   nh.advertise(sensor_state_pub);  
   nh.advertise(version_info_pub);

@@ -270,8 +270,8 @@ bool setupMotorLeft(void)
     portHandler->setBaudRate(1000000);
     write(portHandler, packetHandler2, tb3_id, 10, 1, 0);
     //bkjung
-    write(portHandler, packetHandler2, tb3_id, 11, 1, 1);  //wheel mode
-    //write(portHandler, packetHandler2, tb3_id, 11, 4, 4);     //extended position mode
+    //write(portHandler, packetHandler2, tb3_id, 11, 1, 1);  //wheel mode
+    write(portHandler, packetHandler2, tb3_id, 11, 4, 4);     //extended position mode
     CMD_SERIAL.println("    ok");
   }
 }
@@ -294,8 +294,8 @@ bool setupMotorRight(void)
     portHandler->setBaudRate(1000000);
     write(portHandler, packetHandler2, tb3_id, 10, 1, 1);
     //bkjung
-    write(portHandler, packetHandler2, tb3_id, 11, 1, 1);  //wheel mode
-    //write(portHandler, packetHandler2, tb3_id, 11, 4, 4);     //extended position mode
+    //write(portHandler, packetHandler2, tb3_id, 11, 1, 1);  //wheel mode
+    write(portHandler, packetHandler2, tb3_id, 11, 4, 4);     //extended position mode
     CMD_SERIAL.println("    ok");
   }
 }
