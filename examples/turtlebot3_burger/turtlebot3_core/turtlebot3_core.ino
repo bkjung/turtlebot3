@@ -352,6 +352,20 @@ void publishDriveInformation(void)
 }
 
 /*******************************************************************************
+* Publish msgs (Motor Control Satus) - bkjung
+*******************************************************************************/
+void publishMotorStatus(void)
+{
+  ros::Time stamp_now = rosNow();
+
+  motor_status_msg.header.stamp = stamp_now;
+  motor_status_msg.data = "left input : "+String(left_wheel_angle_from_cmd)+", right input : "+String(right_wheel_angle_from_cmd);
+  motor_status_pub.publish(&motor_status_msg);
+}
+
+
+
+/*******************************************************************************
 * Update the odometry
 *******************************************************************************/
 void updateOdometry(void)

@@ -24,6 +24,7 @@
 #include <std_msgs/Bool.h>
 #include <std_msgs/Empty.h>
 #include <std_msgs/Int32.h>
+#include <std_msgs/String.h>
 #include <sensor_msgs/Imu.h>
 #include <sensor_msgs/JointState.h>
 #include <sensor_msgs/BatteryState.h>
@@ -91,6 +92,7 @@ void publishSensorStateMsg(void);
 void publishVersionInfoMsg(void);
 void publishBatteryStateMsg(void);
 void publishDriveInformation(void);
+void publishMotorStatus(void)
 
 ros::Time rosNow(void);
 ros::Time addMicros(ros::Time & t, uint32_t _micros);
@@ -168,6 +170,11 @@ ros::Publisher battery_state_pub("battery_state", &battery_state_msg);
 // Magnetic field
 sensor_msgs::MagneticField mag_msg;
 ros::Publisher mag_pub("magnetic_field", &mag_msg);
+
+// bkjung added
+// motor control status msg
+std_msgs::String motor_status_msg;
+ros::Publisher motor_status_pub("motor_status_debug", &motor_status_msg);
 
 /*******************************************************************************
 * Transform Broadcaster
