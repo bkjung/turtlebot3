@@ -23,7 +23,7 @@
 #define PROTOCOL_VERSION2               2.0
 
 // Default setting
-#define DEVICENAME                      "/dev/OpenCR"       // Check which port is being used on your controller
+#define DEVICENAME                      "/dev/ttyACM0"       // Check which port is being used on your controller
                                                             // ex) Windows: "COM1"   Linux: "/dev/ttyUSB0"
 #define CMD_SERIAL                      Serial              // USB Serial
 
